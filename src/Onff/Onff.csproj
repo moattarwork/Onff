@@ -4,6 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageProjectUrl>https://github.com/moattarwork/Onff</PackageProjectUrl>
     <PackageDescription>Library for simple feature toggling</PackageDescription>
+    <PackageVersion>1.0.0</PackageVersion>
     <Authors>Mohammad Moattar</Authors>
   </PropertyGroup>
   
