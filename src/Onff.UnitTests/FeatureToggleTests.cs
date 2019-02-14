@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
@@ -27,5 +28,36 @@ namespace Onff.UnitTests
             // Assert
             actual.Should().Be(expected);
         }
+        
+        [Theory]
+        [InlineData("Feature1", "Sample Result")]
+        [InlineData("Feature2", null)]
+        public void Should_Run_SuccessfullyExecuteTheAction_WhenFeatureIsEnabled(string featureName, string expected)
+        {
+            // Arrange
+            var sut = _fixture.ServiceProvider.GetRequiredService<IFeatureToggle>();
+
+            // Act
+            var actual = sut.Run(() => expected, featureName);
+
+            // Assert
+            actual.Should().Be(expected);
+        }
+        
+        [Theory]
+        [InlineData("Feature1", "Sample Result")]
+        [InlineData("Feature2", null)]
+        public async Task Should_RunAsync_SuccessfullyExecuteTheAction_WhenFeatureIsEnabled(string featureName, string expected)
+        {
+            // Arrange
+            var sut = _fixture.ServiceProvider.GetRequiredService<IFeatureToggle>();
+
+            // Act
+            var actual = await sut.RunAsync(() => Task.FromResult(expected), featureName);
+
+            // Assert
+            actual.Should().Be(expected);
+        }
+        
     }
 }
