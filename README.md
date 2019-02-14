@@ -20,6 +20,18 @@ dotnet add package Onff.Extensions
 
 ## Usage
 
+The features can be configured in *appSettings.json* as:
+
+```json
+
+{
+  "Features": {
+    "Feature1": true,
+    "Feature2": false
+  }
+}
+```
+
 The package consists of extensions to register relative services in ServiceCollection.
 
 ```csharp
