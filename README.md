@@ -2,7 +2,7 @@
 Onff is a feature toggling library for .net standard.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/ocjpch6uo9w20c49?svg=true)](https://ci.appveyor.com/project/moattarwork/onff)
-[![NuGet Status](https://img.shields.io/nuget/v/Foil.svg)](https://www.nuget.org/packages/Onff/)
+[![NuGet Status](https://img.shields.io/nuget/v/Onff.svg)](https://www.nuget.org/packages/Onff/)
 
 The package can be downloaded from NuGet using
 
@@ -46,7 +46,7 @@ The package consists of extensions to register relative services in ServiceColle
 
             // OR
 
-            if (Features.IsEnabled("FeatureName))
+            if (Features.IsEnabled("FeatureName"))
             {
                 // Do something related to the feature
             }
