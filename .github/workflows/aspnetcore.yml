@@ -21,5 +21,5 @@ jobs:
         dotnet-version: 2.2.108
     - name: Build & Test with dotnet
       run: | 
-        dotnet build src/onff.sln --configuration Release
-        dotnet test src/onff.sln --configuration Release 
+        dotnet build src/Onff.sln --configuration Release
+        dotnet test src/Onff.sln --configuration Release 
