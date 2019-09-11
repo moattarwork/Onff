@@ -23,3 +23,8 @@ jobs:
       run: | 
         dotnet build src/Onff.sln --configuration Release
         dotnet test src/Onff.sln --configuration Release 
+    - name: Publish sucess to Microsoft Teams
+      uses: moattarwork/Action.Teams.SendMessage@master
+      with:
+        webhook-url: ${{ secrets.TEAMS_WEBHOOK_URL }
+        message: 'Build was successful for Onff project'
