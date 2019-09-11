@@ -26,5 +26,5 @@ jobs:
     - name: Publish sucess to Microsoft Teams
       uses: moattarwork/Action.Teams.SendMessage@master
       with:
-        webhook-url: ${{ secrets.TEAMS_WEBHOOK_URL }
+        webhook-url: ${{ secrets.TEAMS_WEBHOOK_URL }}
         message: 'Build was successful for Onff project'
